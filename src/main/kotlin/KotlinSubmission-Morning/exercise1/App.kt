@@ -11,6 +11,15 @@ Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
 fun myProfile() {
 
+    val firstName = "Andini"
+    val lastName = "Andini"
+    val age = 22
+    val isSingle = true
+
+    println("Nama\t: $firstName $lastName")
+    println("Umur\t: $age")
+    println("Status\t: ${if (isSingle) "Single" else "Not Single"}")
+
 }
 
 
@@ -19,6 +28,10 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
+
+    println("Group ID: $groupId")
+    println("Group Member: $groupMember")
+    println("Session: $session")
     return ""
 }
 
@@ -30,7 +43,9 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  */
 fun myTeam(): List<Any> {
 
-    return listOf()
+    val myTeamMembers = listOf("Andini", "Aras", "Diva Merza", "Dharyl Abi", "Midil", "M. Aldiansyah", "M. Nur Muiz", "Nur Hafidzah", "Sadam", "Yuda", "Zakki")
+    println(myTeamMembers[0])
+    return myTeamMembers
 }
 
 /**
@@ -41,10 +56,13 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
+    val mentor = arrayOf<String>("Raihan", "Fateh")
+    val countOfGroup = arrayOf<String>("Andini", "Aras", "Diva Merza", "Dharyl Abi", "Midil", "M. Aldiansyah", "M. Nur Muiz", "Nur Hafidzah", "Sadam", "Yuda", "Zakki")
 
-    return 0
+    val totalMentor = mentor.size
+    val totalMember = countOfGroup.size
+
+    return totalMentor + totalMember
 }
 
 fun main() {
@@ -62,6 +80,6 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
+    groupDetail("CollaboraCrew", listOf("Andini", "Aras", "Diva Merza", "Dharyl Abi", "Midil", "M. Aldiansyah", "M. Nur Muiz", "Nur Hafidzah", "Sadam", "Yuda", "Zakki"), "Morning")
 
 }

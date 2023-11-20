@@ -8,6 +8,8 @@ fun main() {
      *
      */
 
+    val hero = Hero()
+
 
     /**
      * Latihan 2
@@ -16,6 +18,7 @@ fun main() {
      *
      */
 
+    hero.setProfile("Andini", 22, 154)
 
 
     /**
@@ -24,6 +27,7 @@ fun main() {
      *
      */
 
+    hero.profile()
 
 
     /**
@@ -64,15 +68,37 @@ fun main() {
      * Latihan 4
      * Jalankan aktivitas-aktivitas dengan memanggil fungsi-fungsi sesuai challenge diatas
      *
+     * jalan 4x, lari 2x, makan 1x, minum 5x, lompat 2x, duduk 3x
      */
+    repeat(4){
+        hero.jalan()
+    }
 
+    repeat(2){
+        hero.lari()
+    }
 
+    hero.makan()
+
+    repeat(5){
+        hero.minum()
+    }
+
+    repeat(2){
+        hero.lompat()
+    }
+
+    repeat(3){
+        hero.duduk()
+    }
 
     /**
      * Latihan 5
      * Panggil fungsi profile dibawah ini untuk menampilkan status terkini setelah melakukan aktivitas
      *
      */
+
+    hero.profile()
 
 
 
